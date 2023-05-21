@@ -1,5 +1,3 @@
-%include 'globals.inc'
-
 section .data
 
 section .text
@@ -86,5 +84,5 @@ atoi:
 
 exit:
 
-    mov eax, SYSCALL_EXIT 
+    mov eax, 1 
     int 0x80

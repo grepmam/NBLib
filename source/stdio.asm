@@ -1,5 +1,3 @@
-%include 'globals.inc'
-
 section .data
 
 section .text
@@ -40,8 +38,8 @@ sprint:
 
 .end:
     
-    mov eax, SYSCALL_WRITE       ; write(
-    mov ebx, STDOUT_FD           ;  STDOUT_FD,
+    mov eax, 4                   ; write(
+    mov ebx, 1                   ;  STDOUT_FD,
     mov edx, esi                 ;  string, i
     int 0x80                     ; );
     
@@ -76,8 +74,8 @@ sread:
     push ebp
     mov ebp, esp
 
-    mov eax, SYSCALL_READ    ; read(
-    mov ebx, STDIN_FD        ;    STDIN_FD,
+    mov eax, 3               ; read(
+    mov ebx, 0               ;    STDIN_FD,
     mov ecx, [ebp+8]         ;    buff,
     mov edx, [ebp+12]        ;    size
     int 0x80                 ; );

@@ -28,6 +28,11 @@ ld -m elf_i386 -o hello_world examples/hello_world.o lib/stdio.o lib/stdlib.o
 - [x] strcat
 - [x] strrev
 
+**ctype**
+
+- [x] toupper
+- [x] tolower
+
 ### Motivation
 
 I'm reading Irvine's book and I don't feel like creating a VM just to use MASM, therefore I prefer to learn more by creating some functions on my own but with NASM. Not all of them can be created, but the basic ones will be enough to learn.
